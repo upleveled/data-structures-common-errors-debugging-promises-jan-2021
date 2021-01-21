@@ -94,10 +94,64 @@ arrNums.find((item, i) => {
 // This will come up in the Functional Programming Lecture
 arrA.reduce(() => {});
 
-// Arrays of Objects
-
 // Objects
+
+// Creating an object
+const user = {
+  id: 1,
+  firstName: 'karl',
+  lastName: 'horky',
+  address: {
+    streeName: 'marxergasse',
+    city: 'vienna',
+  },
+  roles: ['teacher', 'admin'],
+};
+
+// Accessing a property on an object
+console.log(user.id);
+console.log(user['id']);
+
+let property = 'id';
+console.log(user[property]); // accesses the user id
+property = 'firstName';
+console.log(user[property]); // accesses the user firstName
+
+// Access property in nested object
+console.log(user.address.city);
+
+// Modifying an object
+// 💥 Mutating version
+user.id = 2;
+
+// ✅ Non-mutating version (duplicate the object)
+const newUser = {
+  ...user, // spread operator
+  id: 3,
+};
 
 // Functions
 
+// Simplest-looking function (arrow function expression):
 // () => {}
+const fnA = () => {};
+
+// Function with keyword
+function fnB() {}
+
+// Function parts
+// Function name: sum
+// Function parameters: num1, num2
+// Function body: starts with { and ends with }
+function sum(num1, num2) {
+  const result = num1 + num2;
+  return result;
+}
+
+// Function calls (run the function)
+// Passing in values (aka arguments)
+sum(1, 2);
+sum(3, 10);
+
+// To save the value from a function call, assign it to a variable
+const sumResult = sum(3, 10);
