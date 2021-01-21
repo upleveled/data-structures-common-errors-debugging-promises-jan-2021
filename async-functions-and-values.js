@@ -5,7 +5,7 @@
 let returnText;
 let returnText2;
 
-const longerTimeout = 600;
+const timeoutA = 600;
 setTimeout(() => {
   // gets called third
   returnText = 'very valuable data';
@@ -15,9 +15,9 @@ setTimeout(() => {
 
   // Goal 3 Solution:
   done(returnText, returnText2);
-}, longerTimeout);
+}, timeoutA);
 
-const shorterTimeout = 500;
+const timeoutB = 500;
 setTimeout(() => {
   // gets called second
   returnText2 = 'more very valuable data';
@@ -27,7 +27,7 @@ setTimeout(() => {
 
   // Goal 3 Solution:
   done(returnText, returnText2);
-}, shorterTimeout);
+}, timeoutB);
 
 console.log('program started'); // gets called first
 
